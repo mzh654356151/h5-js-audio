@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+    font: lighter 16px -apple-system,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+#hovertreesnow{
+    width: 100%;
+    height: 100%;
+}
+.container {
+    overflow: hidden;
+    width: 1020px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+/*歌词部分*/
+.geci{
+    width: 350px;
+    height: 400px;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 80px;
+    right: 6%;
+    overflow: hidden;
+    font-family: "微软雅黑";
+    color: #ccc;
+    animation: show 1s none;
+    border-radius: 20px;
+    z-index: 0;/* 为不影响内容显示必须为最高层 */
+    transition: all 1s;
+}
+.geci .lyrictitle{
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+    height: 18%;
+    line-height: 360%;
+    color: #ffffff;
+    background: rgba(0,0,0,0.05)
+}
+.geci:before{
+    content: "";
+    position: absolute;
+    width:450px;
+    height:490px;
+    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -935px -180px no-repeat;/* 与上面的bg中的background设置一样 */
+    filter: blur(5px);
+    z-index: -2;
+}
+#lyricbtn{
+    right: 0;
+    top: 80px;
+}
+#lyric_txt{
+    width: 350px;
+    position: absolute;
+    transition: 1s all;
+    text-align: center;
+    overflow: hidden;
+}
+#lyric_txt p{
+    margin: 0 auto;
+}
+.lyric_con{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+/*歌碟部分*/
+.music {
+            width: 450px;
+            height: 490px;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            border-radius: 3px;
+            margin: 0 auto;
+            z-index: 0;/* 为不影响内容显示必须为最高层 */
+            position: relative;
+            overflow: hidden;
+            animation:show 1s none;
+        }
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.music:before{
+    content: "";
+    position: absolute;
+    width:450px;
+    height:490px;
+    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -460px -180px no-repeat;/* 与上面的bg中的background设置一样 */
+    filter: blur(5px);
+    z-index: -2;
+}
+.played{
+    color: #b8ffa5;
+}
+.active{
+    color: #b8ffa5;
+    font-size: 20px;
+    font-weight: 700;
+}
+.header {
+    width: 450px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px solid #fec514;
+}
+.header h1 {
+    font-size: 24px;
+    color: #ffffff;
+    width: 450px;
+    height: 60px;
+}
+.fengmian {
+    width: 360px;
+    height: 360px;
+    position: relative;
+    margin: 66px auto;
+    background:url("http://followyourheart.sinaapp.com/Demos/musicPlayer/resource/images/play_disc.png") no-repeat;
+}
+.changpian{
+    position: relative;
+    overflow: hidden;
+    opacity: 0.7;
+}
+#needle{
+    width: 124px;
+    height: 187px;
+    position: absolute;
+    top: -30px;
+    right: 105px;
+    z-index: 3;
+    transform-origin: 20px 20px;
+    transform: rotateZ(-25deg);
+    transition-duration: 1s;
+    background: url("http://followyourheart.sinaapp.com/Demos/musicPlayer/resource/images/play_needle.png");
+}
+.fengmian img {
+    position: absolute;
+    left: 34%;
+    top: 34%;
+    margin-left: -64px;
+    margin-top: -64px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+/*控制条部分*/
+#title {
+    text-align: center;
+    height: 35px;
+    width: 500px;
+    line-height: 40px;
+    position: absolute;
+    left: 290px;
+    color: #E8E8E8;
+}
+#gedan{
+    display: none;
+}
+.jindu {
+    padding-top: 35px;
+    height: 25px;
+    float: left;
+    width: 700px;
+}
+#lyric{
+    display: none;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    right: 146px;
+    top: 38px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.icon img{
+    position: absolute;
+    left: -5px;
+    top: -4px;
+}
+#music-bar {
+    display: inline-block;
+    width: 500px;
+    height: 4px;
+    background: #6d6d6d;
+    margin-right: 7px;
+    border-radius: 4px;
+    margin-left: 5px;
+    position: relative;
+}
+#voice-bar {
+    display: inline-block;
+    width: 80px;
+    height: 4px;
+    background: #6d6d6d;
+    border-radius: 4px;
+    position: absolute;
+    right: 50px;
+    top: 45px;
+}
+#played-bar,#voiced-bar{
+    display: inline-block;
+    height: 4px;
+    float: left;
+    border-radius: 4px;
+    background: -webkit-linear-gradient(left, #fec514, #EE4000);
+    /*background: linear-gradient(left, #fec514, #EE4000);*/
+    position: absolute;
+    z-index: 2;
+    transition: all 0.5s;
+}
+#played-bar:after, #voiced-bar:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+#load-bar {
+    display: inline-block;
+    height: 4px;
+    float: left;
+    border-radius: 4px;
+    background: #a2a2a2;
+    position: absolute;
+    z-index: 1;
+    transition: all 3s; /* 进度加载动画 */
+}
+#time {
+    width: 500px;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 3px 0 0 6px;
+}
+#time span:nth-child(1) {
+    float: left;
+}
+#time span:nth-child(2) {
+    float: right;
+}
+.xia{
+    position: fixed;
+    bottom: 5px;
+    background: rgba(0,0,0,0.3);
+    width: 1000px;
+    margin: 0 auto;
+    height: 70px;
+    z-index: 0;/* 为不影响内容显示必须为最高层 */
+    overflow: hidden;
+    animation:show 1s none;
+}
+.xia:before{
+    content: "";
+    position: absolute;
+    width:1000px;
+    height:400px;
+    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -174px -690px no-repeat;/* 与上面的bg中的background设置一样 */
+    filter: blur(5px);
+    z-index: -2;
+}
+.controls {
+    padding-top: 10px;
+    float: left;
+    /*text-align: center;*/
+}
+.controls a {
+    display: inline-block;
+    color: #fec514;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+#play {
+    font-size: 25px;
+    transition: all 0.3s;
+    border: 2px solid #fec514;
+}
+#play:hover {
+    border: 2px solid rgba(254,197,20,0.7);
+}
+#prev, #next {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: transparent;
+    color: #fec514;
+    border: 2px solid #fec514;
+    transition: all 0.3s;
+}
+#prev:hover, #next:hover {
+    border-color: rgba(254,197,20,0.7);
+}
+#xunhuan, #jingyin {
+    width: 30px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    background: transparent;
+    color: #fec514;
+    margin: 0 20px;
+}
+.micon{
+    width: 40px;
+    height: 30px;
+    float: right;
+    background: url("http://tivonjj.github.io/html5-music-player/res/images/playing.gif") -20px -32px no-repeat;
+}
+.jicon{
+    width: 40px;
+    height: 30px;
+    float: right;
+    background: url("http://tivonjj.github.io/html5-music-player/res/images/playing.png") -20px -32px no-repeat;
+}
+/* 歌单部分 */
+.music-list {
+    width: 350px;
+    height: 400px;
+    border-radius: 20px;
+    margin-right: 20px;
+    /*padding: 10px 0 20px 10px;*/
+    position: absolute;
+    left: 6%;
+    color: #ccc;
+    transition: all 1s;
+    background: rgba(0,0,0,0.3);
+    opacity: 1;
+    z-index: 0;
+    overflow: hidden;
+    animation: show 1s none;
+}
+.music-list:before{
+    content: "";
+    position: absolute;
+    width:350px;
+    height:400px;
+    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -39px -180px no-repeat;/* 与上面的bg中的background设置一样 */
+    filter: blur(5px);
+    z-index: -2;
+}
+.music-list .title{
+    margin: 10px 0 0 10px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.btn{
+    width: 60px;
+    height: 200px;
+    position: absolute;
+    animation:show 1s none;
+    background: url("https://thumbnail0.baidupcs.com/thumbnail/33b7b35c3d93eee494d738400fed43d3?fid=1915159144-250528-108141331006612&time=1520913600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-PbNyVD%2FktE98pfIhavmoiRePc5c%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1658816717626224861&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video");
+}
+#listbtn{
+    left: 0;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.xia .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+}
+.music-list .list {
+    height: 430px;
+    width: 310px;
+    padding: 20px;
+
+}
+.music-list .list ul{
+    width: 300px;
+    height: 350px;
+    overflow: auto;
+}
+.music-list .list li {
+    /*display: block;*/
+    list-style: none;
+    line-height: 30px;
+    border-bottom: 1px dotted #ccc;
+}
+.music-list .list li:hover{
+    opacity: 0.5;
+    background: rgba(0,0,0,0.3);
+}
+.music-list .list span:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+/* 搜索部分 */
+.search {
+    height: 60px;
+    margin: 0 auto;
+    width: 1020px;
+    color: #ccc;
+    position: relative;
+    animation:show 1s none;
+}
+#keyword {
+    width: 260px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    padding: 0 10px;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+#search-btn {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 0 10px;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 30px;
+    left: 186px;
+}
+#result {
+    display: inline-block;
+    border: 1px dashed #ccc;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    opacity: 0;
+    transition: all 0.7s;
+    position: absolute;
+    top: 30px;
+    left: 320px;
+}
+#result strong {
+    font-weight: normal;
+    margin-right: 20px;
+}
+#to-play {
+    color: #fec514;
+}
+.blueHour {
+    /*background: -webkit-linear-gradient(left, #7E898F 0%, #636C75 100%), -webkit-radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.55) 100%), -webkit-radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.08) 63%);*/
+    /*background: linear-gradient(90deg, #7E898F 0%, #636C75 100%), radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.55) 100%), radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.08) 63%);*/
+    /*background-blend-mode: multiply, screen;*/
+    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") 0 -100px  no-repeat;
+}
+@keyframes xuanzhuan {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 响应式 */
+@media screen and (max-width: 450px){
+    body {
+        background: #fff;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        animation:show 1s none;
+        transition: all 1s;
+    }
+    .music-list, #footer {
+        display: none;
+        opacity: 1;
+        left: 0;
+        top: 100px;
+        z-index: 5;
+    }
+    .music-list:before{
+        background: none;
+    }
+    .music {
+        width: 100%;
+        height: 100%;
+    }
+    .music:before{
+        background: none;
+    }
+    .btn{
+        display: none;
+    }
+    .geci:before{
+        background: none;
+    }
+    .geci{
+        background: none;
+        width: 92%;
+        height: 60%;
+        /*display: none;*/
+    }
+    .geci h2{
+        margin-left: 6%;
+        display: none;
+    }
+    .controls {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #music-bar {
+        width: 65%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #voice-bar {
+        width: 15%;
+        right: 4%;
+    }
+    #time {
+        width: 65%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 0;
+    }
+    .jindu {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        width: 100%;
+    }
+    #title {
+        position: absolute;
+        bottom: 110px;
+        left: 0;
+        width: 100%;
+    }
+    .search {
+        width: 100%;
+        position: absolute;
+        bottom: 170px;
+
+    }
+    #result {
+        padding: 0 5%;
+        width: 80%;
+        left: auto;
+        right: 5%;
+        top: 75px;
+        transition: all 0.2s;
+    }
+    #keyword {
+        width: 80%;
+        padding: 0 5%;
+        left: auto;
+        right: 5%;
+    }
+    #search-btn {
+        left: auto;
+        right: 5%;
+    }
+    .fengmian img {
+        left: 16%;
+        top: 13%;
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+    #needle{
+        right: 22%;
+    }
+    .changpian{
+        width: 100%;
+        height: 68%;
+
+    }
+    .fengmian{
+        width: 100%;
+        height: 100%;
+        transform: scale(0.9);
+    }
+    .xia{
+        width: 100%;
+        height: 16%;
+        bottom: 0;
+        overflow: visible;
+    }
+    .xia:before{
+        background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") 0 -612px no-repeat;
+    }
+    .icon{
+        right: 21%;
+    }
+    .blueHour{
+        background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    .search{
+        display: none;
+    }
+    .header h1{
+        position: absolute;
+        left: -10.6%;
+    }
+    #gedan{
+        display: inline-block;
+        position: absolute;
+        left: -1.6%;
+        bottom: 22%;
+        width: 30px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+        background: transparent;
+        color: #fec514;
+        margin: 0 20px;
+    }
+    #lyric{
+        display: inline-block;
+        position: absolute;
+        right: -1.6%;
+        bottom: 22%;
+        width: 30px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+        background: transparent;
+        color: #fec514;
+        margin: 0 20px;
+    }
+    #lyric_txt{
+        width: 96%;
+    }
+    .geci{
+        display: none;
+    }
+}
+/* 无关紧要 */
+#footer {
+    position: fixed;
+    right: 5px;
+    top: 10px;
+}
+#footer a {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 17px;
+    color: #afafaf;
+    border: 1px solid #afafaf;
+    transition: all .3s;
+}
+#footer a:hover {
+    background: #afafaf;
+    color: #000;
+}
