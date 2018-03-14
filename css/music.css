@@ -79,10 +79,10 @@ a {
 /*歌碟部分*/
 .music {
             width: 450px;
-            height: 490px;
+            height: 420px;
             background: rgba(0,0,0,0.3);
             color: #fff;
-            border-radius: 3px;
+            border-radius: 300px;
             margin: 0 auto;
             z-index: 0;/* 为不影响内容显示必须为最高层 */
             position: relative;
@@ -138,6 +138,8 @@ a {
     position: relative;
     overflow: hidden;
     opacity: 0.7;
+    transform-origin: 225px 0;
+    transform: scale(0.8);
 }
 #needle{
     width: 124px;
@@ -397,7 +399,7 @@ a {
 }
 .music-list .list ul{
     width: 300px;
-    height: 350px;
+    height: 310px;
     overflow: auto;
 }
 .music-list .list li {
@@ -514,6 +516,7 @@ a {
     .music {
         width: 100%;
         height: 100%;
+        border-radius: 0;
     }
     .music:before{
         background: none;
@@ -605,7 +608,7 @@ a {
     .changpian{
         width: 100%;
         height: 68%;
-
+        transform: scale(0.9);
     }
     .fengmian{
         width: 100%;
