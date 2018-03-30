@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>ice-audio</title>
 	<link rel="stylesheet" href="css/music.css">
-    <link rel="prefetch" href="http://tivonjj.github.io/html5-music-player/res/images/playing.png" />
-</head>
 <body class="blueHour">
 	<div id="hovertreesnow">
         <div class="search">
@@ -66,7 +64,10 @@
             <div class="lyrictitle">
                <h3 id="lyrichead">歌词</h3>
             </div>
-            <div class="lyric_con" id="lyric_con"><div id="lyric_txt"></div></div>
+            <div class="lyric_con" id="lyric_con">
+                <div id="lyric_txt">
+                </div>
+            </div>
         </div>
         <div class="btn" id="lyricbtn"></div>
         <div class="xia">
@@ -86,7 +87,7 @@
 					<span id="played-bar"></span>
 				</span>
                 <div class="icon">
-                    <img src="voice.png" width="30px" height="30px">
+                    <img src="img/voice.png" width="30px" height="30px">
                 </div>
 				<span id="voice-bar">
 					<span id="voiced-bar"></span>
@@ -99,7 +100,7 @@
     </div>
 	</div>
     </div>
-    <script type="text/javascript" src="http://hovertree.com/texiao/js/7/hovertreesnow.js"></script>
+    <script type="text/javascript" src="js/snow.js"></script>
 	<script src="js/music.js"></script>
 	<script>
 		// 回调函数将返回的内容添加到结果区（需要在页面加载完后加载上，为后面执行回调）
