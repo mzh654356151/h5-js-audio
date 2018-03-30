@@ -220,6 +220,11 @@ window.onload = function () {
     };
     // 下一曲
     next.onclick = function () {
+        var temp = xunhuan.innerHTML;
+        if(temp == "随机"){
+            var len = sourceList.length;
+            currentSrcIndex = Math.floor(Math.random()*len%len);
+        }
         changeMusic('next');
         rotaten();
         seticon(currentSrcIndex);
@@ -227,6 +232,11 @@ window.onload = function () {
     };
     // 上一曲
     prev.onclick = function () {
+        var temp = xunhuan.innerHTML;
+        if(temp == "随机"){
+            var len = sourceList.length;
+            currentSrcIndex = Math.floor(Math.random()*len%len);
+        }
         changeMusic('prev');
         rotaten();
         seticon(currentSrcIndex);
@@ -347,12 +357,22 @@ window.onload = function () {
 
     // 是否单曲循环
     xunhuan.onclick = function () {
-        if (audio.loop) {
+        if (this.innerHTML == "单曲") {
             audio.loop = false;
             this.innerHTML = '循环';
-        } else {
+        }
+        else if(this.innerHTML == "随机"){
             audio.loop = true;
             this.innerHTML = '单曲';
+        }
+        else if(this.innerHTML == "循环"){
+            var len = sourceList.length;
+            var random;
+            while(random == Math.floor(Math.random()*len%len)){
+                random = Math.floor(Math.random()*len%len);
+            }
+            currentSrcIndex = random;
+            this.innerHTML = '随机';
         }
     };
 
