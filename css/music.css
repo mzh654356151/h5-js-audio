@@ -52,7 +52,7 @@ a {
     position: absolute;
     width:450px;
     height:490px;
-    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -935px -180px no-repeat;/* 与上面的bg中的background设置一样 */
+    background:url("../img/bg.jpg") -935px -180px no-repeat;/* 与上面的bg中的background设置一样 */
     filter: blur(5px);
     z-index: -2;
 }
@@ -102,7 +102,7 @@ a {
     position: absolute;
     width:450px;
     height:490px;
-    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -460px -180px no-repeat;/* 与上面的bg中的background设置一样 */
+    background:url("../img/bg.jpg") -460px -180px no-repeat;/* 与上面的bg中的background设置一样 */
     filter: blur(5px);
     z-index: -2;
 }
@@ -132,7 +132,7 @@ a {
     height: 360px;
     position: relative;
     margin: 66px auto;
-    background:url("http://followyourheart.sinaapp.com/Demos/musicPlayer/resource/images/play_disc.png") no-repeat;
+    background:url("../img/play_disc.png") no-repeat;
 }
 .changpian{
     position: relative;
@@ -151,7 +151,7 @@ a {
     transform-origin: 20px 20px;
     transform: rotateZ(-25deg);
     transition-duration: 1s;
-    background: url("http://followyourheart.sinaapp.com/Demos/musicPlayer/resource/images/play_needle.png");
+    background: url("../img/play_needle.png");
 }
 .fengmian img {
     position: absolute;
@@ -279,7 +279,7 @@ a {
     position: absolute;
     width:1000px;
     height:400px;
-    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -174px -690px no-repeat;/* 与上面的bg中的background设置一样 */
+    background:url("../img/bg.jpg") -174px -690px no-repeat;/* 与上面的bg中的background设置一样 */
     filter: blur(5px);
     z-index: -2;
 }
@@ -331,13 +331,13 @@ a {
     width: 40px;
     height: 30px;
     float: right;
-    background: url("http://tivonjj.github.io/html5-music-player/res/images/playing.gif") -20px -32px no-repeat;
+    background: url("../img/playing.gif") -20px -32px no-repeat;
 }
 .jicon{
     width: 40px;
     height: 30px;
     float: right;
-    background: url("http://tivonjj.github.io/html5-music-player/res/images/playing.png") -20px -32px no-repeat;
+    background: url("../img/playing.png") -20px -32px no-repeat;
 }
 /* 歌单部分 */
 .music-list {
@@ -361,7 +361,7 @@ a {
     position: absolute;
     width:350px;
     height:400px;
-    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") -39px -180px no-repeat;/* 与上面的bg中的background设置一样 */
+    background:url("../img/bg.jpg") -39px -180px no-repeat;/* 与上面的bg中的background设置一样 */
     filter: blur(5px);
     z-index: -2;
 }
@@ -376,7 +376,7 @@ a {
     height: 200px;
     position: absolute;
     animation:show 1s none;
-    background: url("https://thumbnail0.baidupcs.com/thumbnail/33b7b35c3d93eee494d738400fed43d3?fid=1915159144-250528-108141331006612&time=1520913600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-PbNyVD%2FktE98pfIhavmoiRePc5c%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1658816717626224861&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video");
+    background: url("../img/snow.png");
 }
 #listbtn{
     left: 0;
@@ -477,7 +477,7 @@ a {
     /*background: -webkit-linear-gradient(left, #7E898F 0%, #636C75 100%), -webkit-radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.55) 100%), -webkit-radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.08) 63%);*/
     /*background: linear-gradient(90deg, #7E898F 0%, #636C75 100%), radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.55) 100%), radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.08) 63%);*/
     /*background-blend-mode: multiply, screen;*/
-    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") 0 -100px  no-repeat;
+    background: url("../img/bg.jpg") 0 -100px  no-repeat;
 }
 @keyframes xuanzhuan {
     0% {
@@ -517,7 +517,7 @@ a {
         width: 100%;
         height: 100%;
         border-radius: 0;
-        overflow:visible;
+        overflow: visible;
     }
     .music:before{
         background: none;
@@ -623,13 +623,13 @@ a {
         overflow: visible;
     }
     .xia:before{
-        background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") 0 -612px no-repeat;
+        background: url("../img/bg.jpg") 0 -612px no-repeat;
     }
     .icon{
         right: 21%;
     }
     .blueHour{
-        background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520840826829&di=c9789d64b921989a63d772f07bcf515a&imgtype=0&src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F5c%2Ff7%2Ff1%2F5cf7f18c3f4df396ec560c55ad0e8151.jpg") no-repeat;
+        background: url("../img/bg.jpg") no-repeat;
         width: 100%;
         height: 100%;
     }
@@ -673,21 +673,21 @@ a {
         display: none;
     }
 }
-/* 无关紧要 */
-#footer {
-    position: fixed;
-    right: 5px;
-    top: 10px;
-}
-#footer a {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 17px;
-    color: #afafaf;
-    border: 1px solid #afafaf;
-    transition: all .3s;
-}
-#footer a:hover {
-    background: #afafaf;
-    color: #000;
-}
+/*#footer {*/
+    /*position: fixed;*/
+    /*right: 5px;*/
+    /*top: 10px;*/
+/*}*/
+/*#footer a {*/
+    /*display: inline-block;*/
+    /*padding: 2px 10px;*/
+    /*border-radius: 17px;*/
+    /*color: #afafaf;*/
+    /*border: 1px solid #afafaf;*/
+    /*transition: all .3s;*/
+/*}*/
+/*#footer a:hover {*/
+    /*background: #afafaf;*/
+    /*color: #000;*/
+/*}*/
+
